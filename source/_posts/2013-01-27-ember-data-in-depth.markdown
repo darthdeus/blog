@@ -217,3 +217,6 @@ One scenario when transactions can be useful is when you just need to
 change one record, without affecting changes to other records. You can
 put that change in a separate transaction, instead of just doing
 `store.commit()`.
+
+
+**More content will be coming soon**
