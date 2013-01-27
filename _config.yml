@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://darthdeus.github.com
+title: darthdeus vs Ember.js
+subtitle: My journey to Ember.js grandmastery
+author: Jakub Arnold
 simple_search: http://google.com/search
 description:
 

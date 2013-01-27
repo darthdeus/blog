@@ -1,0 +1,19 @@
+clean	Clean out caches: .pygments-cache, .gist-cache, .sass-cache
+copydot[source,dest]	copy dot files for deployment
+deploy	Default deploy task
+gen_deploy	Generate website and deploy
+generate	Generate jekyll site
+install[theme]	Initial setup for Octopress: copies the default theme into the path of Jekyll's generator.
+integrate	Move all stashed posts back into the posts directory, ready for site generation.
+isolate[filename]	Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly.
+list	list tasks
+new_page[filename]	Create a new page in source/(filename)/index.markdown
+new_post[title]	Begin a new post in source/_posts
+preview	preview the site in a web browser
+push	deploy public directory to github pages
+rsync	Deploy website via rsync
+set_root_dir[dir]	Update configurations to support publishing to root or sub directory
+setup_github_pages[repo]	Set up _deploy folder and deploy branch for Github Pages deployment
+update_source[theme]	Move source to source.old, install source theme updates, replace source/_includes/navigation.html with source.old's navigation
+update_style[theme]	Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom
+watch	Watch the site and regenerate when it changes
