@@ -6,8 +6,6 @@ comments: true
 categories: "Ember Data"
 ---
 
-# Inside Ember Data
-
 This is a guide explaining how Ember Data works internaly. My initial
 motivation for writing this is to understand Ember better myself. I've
 found that every time I understand something about how Ember works, it
