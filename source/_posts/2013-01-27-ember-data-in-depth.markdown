@@ -146,7 +146,7 @@ user.get("isDirty") // => true, even though it should be false
 
 But let's hope this will be fixed soon.
 
-### Transactions
+## Transactions
 
 Until now we assumed that there is some *global* transaction which is
 the same for every single model. But this doesn't have to be true. We
@@ -218,5 +218,58 @@ change one record, without affecting changes to other records. You can
 put that change in a separate transaction, instead of just doing
 `store.commit()`.
 
+Important thing to note here is that there's a `defaultTransaction` for
+the store to which you can get via `store.get("defaultTransaction")`.
+This is where all of the records are placed, unless you explicitly
+create a new transaction and assign a record to it.
+
+These two are completely equivalent
+
+```javascript
+store.commit();
+store.get("defaultTransaction").commit();
+```
+
+Just take a look at how `store.commit()` is defined
+
+```javascript
+commit: function() {
+  get(this, 'defaultTransaction').commit();
+},
+```
+
+## `commit()`
+
+Now that we understand how transactions work, let's dig deep into
+`store.commit()`. First thing we need to understand here is that Ember
+Transactions use this thing called `bucket` to store records with
+various states in. This is first initialized in the [`init` method of
+`DS.Transaction`](https://github.com/emberjs/data/blob/master/packages/ember-data/lib/system/transaction.js#L91-L101)
+
+```javascript
+init: function() {
+  set(this, 'buckets', {
+    clean:    Ember.OrderedSet.create(),
+    created:  Ember.OrderedSet.create(),
+    updated:  Ember.OrderedSet.create(),
+    deleted:  Ember.OrderedSet.create(),
+    inflight: Ember.OrderedSet.create()
+  });
+
+  set(this, 'relationships', Ember.OrderedSet.create());
+}
+```
+
+Each bucket represents one state in which a record can possibly be.
+These are used in many different places in the transaction, and every
+time a method changes it's state, it will be moved to a corresponding
+bucket
+
+```javascript Example of recordBecameDirty
+recordBecameDirty: function(bucketType, record) {
+  this.removeFromBucket('clean', record);
+  this.addToBucket(bucketType, record);
+},
+```
 
 **More content will be coming soon**
