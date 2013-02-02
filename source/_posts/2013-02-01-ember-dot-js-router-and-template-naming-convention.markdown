@@ -152,7 +152,7 @@ will be related to that `resource`, that's why they don't need to load
 it separately. They can access it from the parent `PostController` via
 `needs` ([more about that can be found in this article](http://darthdeus.github.com/blog/2013/01/27/controllers-needs-explained/)
 
-[Here's a JSBin](http://jsbin.com/ogorab/37/edit)
+[Here's a JSBin](http://jsbin.com/ogorab/44/edit)
 
 This is the general pattern you would be using if you want to nest
 everything. But what if you don't want to render `post` into the

@@ -6,8 +6,7 @@ comments: true
 categories: Data Transactions
 ---
 
-We talked about transactions in [one of the previous
-articles](http://darthdeus.github.com/blog/2013/01/27/ember-data-in-depth/)
+We talked about transactions in [one of the previous articles](http://darthdeus.github.com/blog/2013/01/27/ember-data-in-depth/)
 (read it if you haven't already), but we didn't really touch on when to
 use them in real world. One of the most common use cases for me is when
 I just want to manage a single record while there are many changes
