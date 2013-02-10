@@ -6,8 +6,6 @@ comments: true
 categories: Router
 ---
 
-# Request Lifecycle
-
 Router is the core part of Ember. Every time we go to a new URL it means
 the
 route object is called with our params and stuff. These are the hooks
