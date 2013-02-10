@@ -1,0 +1,50 @@
+---
+layout: post
+title: "render, control, partial, view, template"
+date: 2013-02-10 21:29
+comments: true
+categories: Templates
+---
+
+There are many ways one can DRY up templates when using Ember.js, it all
+depends on what you're trying to achieve.
+
+## partial && template
+
+`{{partial "foo"}}` will take a template `foo.handlebars` and insert it
+without changing anything, which is exactly the same as in Rails. There
+are no views created, no scope changes, it just inserts the template
+right there.
+
+`{{template}}` isn't really meant to be used anymore, so use
+`{{partial}}` instead.
+
+## view
+
+`{{view App.FooView}}` will create an instance of `App.FooView` (with
+`foo.handlebars` template unless you override the name) and insert it in
+place. You can bind on properties of the view, such as `{{view
+App.FooView contentBinding="foobar"}}`, or just specify a property
+directly `{{view App.FooView class="foobar"}}`.
+
+This is a low level thing and is mostly used to instantiate simple
+views, such as `{{view Ember.TextField valueBinding="name"
+class="username"}}`
+
+## render && control
+
+Most of the time you're looking to use `{{render}}` instead of
+`{{view}}` as it offers better means of abstraction. `{{render "foo"
+bar}}` will create a `App.FooController` and bind it's content to `bar`.
+It also creates a `App.FooView` and renders a `foo` template.
+
+One drawback is that `{{render}}` **can not be called multiple times on
+a single route**. If you need a self sustainable widget which can be
+created any number of times you want, you're looking for `{{control}}`
+whic has exactly the same effect as `{{redner}}`, but it will have a new
+controller instance every time you call it, while `{{render}}` uses a
+singleton controller.
+
+Please keep in mind that `{{control}}` is currently under heavy
+development and will probably change soon, because of the high number of
+issues there are with it.
