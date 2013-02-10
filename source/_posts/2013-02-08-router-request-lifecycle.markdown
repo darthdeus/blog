@@ -30,9 +30,28 @@ Now let's take a look at them in more detail
 ## `activate`/`deactivate`
 
 These were formely known as `enter`/`exit`, which are now marked as
-private.
+private. `activate` will be executed when user enters a route, be it
+from a transition or from a URL directly, and `deactivate` is executed
+when user transitions away from the route.
 
-**TODO - transactions**
+One of the most common use cases for me is doing a transaction rollback
+in `deactivate`.
+
+```javascript
+App.PostsNewRoute = Ember.Route.extend({
+
+  deactivate: function() {
+    this.modelFor("postsNew").get("transaction").rollback();
+  }
+
+});
+```
+
+I find this mostly useful when having a _new record form_ (or even when
+editing a record), where you basically want to rollback any changes
+which happened when the user exits the route. It doesn't matter if the
+user submits the form first, because then the transaction will be
+comitted and there will be nothing to rollback.
 
 ## `model`/`serialize`
 
@@ -162,7 +181,7 @@ Let's see an example
 App.PostsRoute = Ember.Route.extend({
 
   setupController: function(controller) {
-    controller.set("content", App.User.find());
+    controller.set("content", App.Post.find());
   }
 
 });
