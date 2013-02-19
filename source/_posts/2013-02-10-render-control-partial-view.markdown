@@ -24,9 +24,8 @@ changes, it just inserts the template right there.
 `{% raw %}{{view App.FooView}}{% endraw %}` will create an instance of
 `App.FooView` (with `foo.handlebars` template unless you override the
 name) and insert it in place. You can bind on properties of the view,
-such as `{% raw %}{{view App.FooView contentBinding="foobar"}}{% endraw
-%}`, or just specify a property directly `{% raw %}{{view App.FooView
-class="foobar"}}{% endraw %}`.
+such as `{% raw %}{{view App.FooView contentBinding="foobar"}}{% endraw %}`,
+or just specify a property directly `{% raw %}{{view App.FooView class="foobar"}}{% endraw %}`.
 
 This is a low level thing and is mostly used to instantiate simple
 views, such as `{% raw %}{{view Ember.TextField valueBinding="name" class="username"}}{% endraw %}`
