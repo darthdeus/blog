@@ -3,7 +3,6 @@ layout: post
 title: "PostgreSQL Basics by Example"
 date: 2013-08-19 01:19
 comments: true
-layout: post
 categories: postgresql
 ---
 
