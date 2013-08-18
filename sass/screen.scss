@@ -8,3 +8,29 @@
 @import "base";
 @import "partials";
 @import "custom/styles";
+
+.call-to-action {
+text-align: center; }
+.call-to-action a {
+  display: inline-block;
+  padding: 8px 10px 10px;
+  background: #EB374B;
+  color: #FFF;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: normal;
+  white-space: -moz-normal;
+  white-space: -normal;
+  white-space: -o-normal;
+  white-space: normal;
+overflow: hidden; }
+.call-to-action a:hover {
+  text-decoration: none;
+opacity: 0.7; }
+.call-to-action a img {
+  border: none;
+float: left; }
+.call-to-action a span {
+  float: left;
+margin-top: 2px; }
+
