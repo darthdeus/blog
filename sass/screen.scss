@@ -10,7 +10,13 @@
 @import "custom/styles";
 
 .call-to-action {
-text-align: center; }
+text-align: center;
+}
+
+.call-to-action h4 {
+  font-size: 20px;
+}
+
 .call-to-action a {
   display: inline-block;
   padding: 8px 10px 10px;
@@ -29,8 +35,9 @@ overflow: hidden; }
 opacity: 0.7; }
 .call-to-action a img {
   border: none;
+  box-shadow: none;
 float: left; }
 .call-to-action a span {
   float: left;
-margin-top: 2px; }
+}
 
