@@ -13,7 +13,7 @@ layout: page
     var arrURL = document.URL.split("/");
     var arrParams = arrURL[3].split("?");
     var searchParam = arrParams[0].substr(0, arrParams[0].lastIndexOf("."));
-    
+
     document.write('<a href="{{ site.simple_search }}?q=site:{{ site.url | shorthand_url }} ' + searchParam + '">search</a>')
   </script>
   <noscript><a href="{{ site.simple_search }}?q=site%3A{{ site.url | shorthand_url }}">search</a></noscript>
