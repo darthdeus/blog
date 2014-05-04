@@ -20,6 +20,12 @@ $ psql postgres john
 $ psql -U john postgres
 ```
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.sensible.io/2013/08/19/postgresql-basics-by-example.html">
+<link rel="canonical" href="http://blog.sensible.io/2013/08/19/postgresql-basics-by-example.html" />
+
+
 Connecting to a host/port (by default `psql` uses a unix socket)
 
 ```
