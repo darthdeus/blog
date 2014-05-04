@@ -7,9 +7,14 @@ categories: Router
 ---
 
 Router is the core part of Ember. Every time we go to a new URL it means
-the
-route object is called with our params and stuff. These are the hooks
-sorted in order in which they are called
+the route object is called with our params and stuff. These are the
+hooks sorted in order in which they are called
+
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/02/08/router-request-lifecycle.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/02/08/router-request-lifecycle.html" />
+
 
 - enter (private)
 - activate - executed when entering the route

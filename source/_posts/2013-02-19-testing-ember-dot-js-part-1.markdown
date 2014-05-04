@@ -23,6 +23,12 @@ of the bindings before it finishes, which means you can render a view
 inside `Ember.run` and check the DOM right after that. Here's an example
 from the `Ember.View` tests
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/02/19/testing-ember-dot-js-part-1.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/02/19/testing-ember-dot-js-part-1.html" />
+
+
 ```javascript
 view = Ember.ContainerView.create({
   childViews: ["child"],

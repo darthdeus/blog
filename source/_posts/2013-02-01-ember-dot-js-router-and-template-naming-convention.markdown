@@ -17,6 +17,12 @@ Let's say we have a model `App.Post` and we want to show a list of posts
 and a new post form. There are many ways you can go about this, so let's
 start with the simplest.
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/02/01/ember-dot-js-router-and-template-naming-convention.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/02/01/ember-dot-js-router-and-template-naming-convention.html" />
+
+
 ```javascript
 App.Router.map(function() {
   this.resource("posts", { path: "/" });

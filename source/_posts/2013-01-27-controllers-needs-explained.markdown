@@ -16,6 +16,11 @@ App.UserController = Ember.ObjectController.extend({
 })
 ```
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/01/27/controllers-needs-explained.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/01/27/controllers-needs-explained.html" />
+
 There is no need or even possibility to manage the controller instances
 with the new router though. It will create the instance for us. One way
 we can use this is with `this.controllerFor`, which can be used inside

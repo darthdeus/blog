@@ -14,6 +14,11 @@ happening on the page.
 
 Adding a record to a transaction is simple
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/02/02/using-transactions-in-ember-data.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/02/02/using-transactions-in-ember-data.html" />
+
 ```javascript
 // say that we are in a controller
 store = this.get("store");

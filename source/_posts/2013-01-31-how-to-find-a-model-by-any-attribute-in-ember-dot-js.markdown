@@ -16,6 +16,11 @@ App.User.find({ username: "wycats" }) // returns a ManyArray
 App.User.findQuery({ username: "wycats" }) // same as the above
 ```
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/01/31/how-to-find-a-model-by-any-attribute-in-ember-dot-js.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/01/31/how-to-find-a-model-by-any-attribute-in-ember-dot-js.html" />
+
 If you want to search for a user by his username, you have two options
 
 ## Using .find with _smart_ server side

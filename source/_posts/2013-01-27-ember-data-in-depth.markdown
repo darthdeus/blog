@@ -16,6 +16,11 @@ improves my application code.
 First we need to understand what are the main concepts. Let's start with
 a simple example.
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/01/27/ember-data-in-depth.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/01/27/ember-data-in-depth.html" />
+
 
 ```javascript
 App.User = DS.Model.extend({

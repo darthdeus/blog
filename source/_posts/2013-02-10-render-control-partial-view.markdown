@@ -9,6 +9,11 @@ categories: Templates
 There are many ways one can DRY up templates when using Ember.js, it all
 depends on what you're trying to achieve.
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/02/10/render-control-partial-view.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/02/10/render-control-partial-view.html" />
+
 ## partial && template
 
 `{% raw %}{{partial "foo"}}{% endraw %}` will take a template

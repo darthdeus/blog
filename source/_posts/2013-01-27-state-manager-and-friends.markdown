@@ -16,6 +16,11 @@ In the general concept, state manager is basically some object which
 manages states and the transitions between them, thus representing a
 finite state machine.
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/01/27/state-manager-and-friends.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/01/27/state-manager-and-friends.html" />
+
 Let's say we have a `Post` which can be in two states, `draft` and
 `published`. It begins it's life as a `draft` and when we `publish` it,
 it should send out a notification email. The way Ember would handle this

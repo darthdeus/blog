@@ -13,6 +13,12 @@ There are some places in Ember where you might be surprised by how
 things behave and this might be one of those. Let's start with an
 example.
 
+<!-- more -->
+
+<meta http-equiv="refresh" content="0; url=http://blog.trackets.com/2013/01/27/concatenated-properties.html">
+<link rel="canonical" href="http://blog.trackets.com/2013/01/27/concatenated-properties.html" />
+
+
 ```javascript
 App.UserView = Ember.View.extend({
   classNames: ["user"]
